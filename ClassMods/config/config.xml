@@ -1,0 +1,19 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="options.lua"/>
+	<Script file="_alerts.lua"/>
+	<Script file="_altresourcebar.lua"/>
+	<Script file="_announcements.lua"/>
+	<Script file="_clicktocast.lua"/>
+	<Script file="_cooldown.lua"/>
+	<Script file="_crowdcontrol.lua"/>
+	<Script file="_dispels.lua"/>
+	<Script file="_healthbar.lua"/>
+	<Script file="_indicators.lua"/>
+	<Script file="_main.lua"/>
+	<Script file="_resourcebar.lua"/>
+	<Script file="_targetbar.lua"/>
+	<Script file="_timersets.lua"/>
+	<Script file="_totemtimers.lua"/>
+	<Script file="wiz_timerbars.lua"/>
+</Ui>

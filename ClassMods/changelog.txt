@@ -1,0 +1,156 @@
+- Support site http://jshbclassmods.proboards.com
+- ClassMods is based on JSHB by _JS_
+- Follow me on Twitter '@kaelythWoW' or Facebook, YouTube 'kaelythwow' (nothing here yet)
+
+7.3.0.1
+- Updated Ace3.0 Libs to help with the PlaySound function change.
+
+7.3.0.0
+- New versioning convention to match the game patches better.
+- Updated the PlaySound function that was preventing the configuration menu to open.
+- Fixed a bug where the Health Bar could try to update with a negitive health value.
+- Shaman: Removed Boulderfist from the Stacks settings as it no longer has charges.
+
+1.32
+- Added LibDispellable to better validate dispellable buffs and debuffs on player targets.
+- The Dispel Module now works with friendly targets, the alert will show the icon of your ability that can dispell the buff or debuff.
+- Fixed a bug with Dispel notifications not displaying.
+
+1.31
+- Updated interface for patch 7.1
+- Warlock: Enabled dispel module now that Devour Magic has been returned to Fel Hunter's
+- Locale: enUS is now correctly the default with additional translations replacing the defaults.
+ 
+1.30.1
+- Target Bar: Fixed a bug that would disable the target resource when enabling target classification icon.
+- Resource Bar: Fixed a bug with Stacks not displaying the correct number of charge based abilities that are modified by talents.
+- Alternate Resource Bar: Fixed an error for Brewmaster Monks Stagger after a reconfigure was called (eg. level up) 
+
+1.30
+- Pet Health: Option to have a bar over just a %
+- Target Bar: Option to display target's resource
+- Target Bar: Option to hide when no target selected
+- Target Bar: Option to use class colour only for players
+- Target Bar: Option to colour based on reaction (friendly, neutral, hostile)
+- Target Bar: Option to display an icon for Rare / Elite targets
+- Option to globally turn off sounds
+- Resource Bar: Fixed an issue where Stacks based on a harmful aura were showing anyone's, not just the players.
+
+1.29.1
+- Druid: Added Astral Power changes from Aug 22nd 2016 Hofixes
+- Rogue: Added Agonizing Poision changes from Aug 22nd 2016 Hotfixes
+
+1.29
+- Target Bar: Added an option to display the targeted unti creature type.
+- Target Bar: Fixed an error that would occur when your target transitions into a cut scene / scripted event.
+- Death Knight: Added Festering Wound to the list of trackable auras for the stacks bar.
+- Death Knight: Removed Ossuary from TimerBar2 which was put there by mistake (it has no duration).
+- Updated LibSharedMedia
+
+1.28
+- Demon Hunter: Added pre launch Demon Hunter Support.
+
+1.27.1
+- Alternate Resource Bar: Warlocks now correctly show 5 Soul Shards
+- Alternate Resource Bar: Monks should no longer generate an error from this module. Short story is that all 3 specs need to be handled differently.
+
+1.27
+- Paladin: Added Divine Stead to the list of trackable "stacks" after the Aug 2nd hotfix.
+- Indicators: Indicators set to show if missing should correctly display the icon (only works when using a SpellID).
+- Alternate Resource Bar: Added more customisation, allowing for width and height and individual backdrop / borders in basic mode.
+- Click to Cast: Removed Grid specific code that was causing a loading issue. 
+
+1.26
+- Click to Cast: Reworked when and how this module reconfigured itself, should fix issues people have been getting with raid frames.
+- Hunter: Pet Health Alert should now correctly show the Mend Pet icon.
+
+1.25
+- Totem Timers: Fixed an issue with Monk Statues not re-using their frame when re-cast.
+- Alternate Resource Bar: Added an option for basic coloured squares instead of Blizzard graphics.
+- Paladin: Fixed a bug when tracking "Zeal" with the stacks bar.
+- Added the ability to alter update intervals, globally for ClassMods or for each module that uses OnUpdate.
+- Resource Bar Stacks, Alert and Indicator modules have a reset button designed for use when copying a profile from one class to another when you want to use a layout.
+
+1.24
+- Timer Bars, Alerts, Indicators, Announcements, and Click to Cast: Now accept "shift click" spell links from spell book or items. 
+- Removed a default setting for non "timer bar" timers (alerts, DK runes, totem and crowd control timers) that added an 's' after the timer which was causing issues with some regions.
+- Timer Bars: Re-added the "Only If Known" condition to timers, it was unintentional and is required to be turned off for some timers.
+- Timer Bars: Can now properly display item cooldowns.
+- Resource Bar, Health Bar and Target Bar: Increased the min and max values of font offsets.
+
+1.23
+- Resource Bar: Added back the ability to choose your own bar colour.
+- Fixed some issues when trying to create timers, alerts or indicators using spell names from other specs or sources.
+- Announcements: Fixed a logical issue that was preventing successful interrupts from being announced.
+- Made the mover frame titles use the Cooldown Text font option, it was using a fixed font and could be the cause of issues in other regions.
+- Cooldowns on Alerts and Totems were not using the Cooldown Timer font, this has been fixed for the above reason.
+
+1.22
+- Profiles: Added a slash command to change profiles "/classmods setprofile <profilename>". This can be added to a macro.
+- Profiles: Added a feature where if you create a profile named <Spec Class>, it will be the active profile when you change to that spec. Example:'Holy Paladin' or 'Beast Mastery Hunter' 
+- Indicators: Added a count to the number of auras detected, this allows you to know how many people are affected by the chosen aura.
+- Timers: Added a charge count for spells that have charges.
+- Timers: Fixed the new timer template to correctly set 'Only if known'
+- Font Offsets: Changed various font offsets so it makes more sense when using the slider to position the display.
+- Shaman: Added Lava Burst to the default cooldown tiemrs, it was missing previously, sorry Shaman :(
+
+1.21
+- Resource Bar: Changed low and higher resource % to numbers for specs that have 100 to 150 max resource.
+- Resource Bar: Fixed a bug where default Tick Marks could not be changed.
+- Target Bar: Fixed an error when selecting "class colour".
+- Locales: Updated locale files
+- Ace Libraries: Updated Ace 3.0 and Shared Media Libraries, this fixed the icons on the Timer Bars (yay) 
+
+1.20
+- General clean up version for my sake :D
+
+1.19
+- Health Bar: fixed a bug with abbreviating the display number
+- Target Bar: fixed a bug with abbreviating the display number
+- Hunter: re-orderd some of the default timers
+
+1.18
+- Indicators: Add a new module that lets you track a UnitAura, it is similar to Alerts except it can be used to 
+track Buffs or Debuffs that do not have a duration. Comes with optional "Only in Combat" and "Only if Missing" conditionals.
+- Health Bar: Modified the absorb tracking bar a little to make it easier to see incoming heals while you have an active absorb.
+
+1.17
+- Timer Bars: Added back the options wizards to manipulate the timer bars, e.g. Delete all timers, import selected timers, change how this bar works etc.
+- Health Bar: Added incoming heals and absorb tracking.
+- Target Bar: Added incoming heals and absorb tracking.
+- Options: Cleaned up the options a little, still wanted to add more descriptions.
+
+1.16
+- Rogue: Settings completed.
+- Warlock: Settings completed.
+- Warrior: Settings completed.
+
+1.15
+- Paladin: Settings completed.
+- Priest: Settings completed.
+
+1.14
+- Monk: Settings completed.
+- General: Fixed an issue with TotemTimers and classes that don't use the module which prevented opening the options.
+- General: New minimap icons per class, this is after all, ClassMods :)
+
+1.13
+- Mage: Settings completed.
+- Shaman: Settings completed.
+- TotemTimer: New module added to track Shaman Totems as well as other abilities that use Totem API. Restoration Druid's Efflorecense, Mage's Rune of Power and Arcane Familiar.
+
+1.12
+- Druid: Settings completed.
+
+1.11
+- Death Knight: Settings completed.
+- Alternate Resource Bar: enabled for Death Knight's Runes.
+
+1.1
+- Transferred all "class modules" into "class settings" that are read by each module, this removes repeated modules for each class.
+- Added Click to Cast module
+- Added Alternate Resource Bar module
+- Consolidated interrupt and class announcement modules into a new Announcements module
+
+1.0
+- ClassMods re-written from the ground up with more customization available to those who wish to have it.

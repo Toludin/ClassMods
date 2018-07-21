@@ -1,0 +1,46 @@
+﻿## Interface: 70300
+## Title: |cffFF4500ClassMods|r v7.3.0.1
+## Notes: ClassMods is based on the concepts of JSHB by _JS_
+## Version: v7.3.0.1
+## SavedVariables: CMDb
+## LoadOnDemand: 0
+## DefaultState: enabled
+## Author: Kaelyth @ Dath'Remar
+## X-Credits: JSHB4 creator _JS_
+## X-Website: http://jshbclassmods.proboards.com
+## X-Embeds: Ace3
+
+# LIBRARIES
+#@no-lib-strip@
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceAddon-3.0\AceAddon-3.0.xml
+libs\AceEvent-3.0\AceEvent-3.0.xml
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+libs\AceLocale-3.0\AceLocale-3.0.xml
+libs\AceConsole-3.0\AceConsole-3.0.xml
+libs\AceGUI-3.0\AceGUI-3.0.xml
+libs\AceConfig-3.0\AceConfig-3.0.xml
+libs\LibSharedMedia-3.0\lib.xml
+libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+libs\LibDispellable-1.0\LibDispellable-1.0.xml
+#@end-no-lib-strip@
+
+# INITIALIZATION
+initialization.lua
+
+# LOCALE
+locale\locale.xml
+
+# SETTINGS
+settings\settings.xml
+
+# MAIN
+ClassMods.lua
+
+# MODULES
+modules\modules.xml
+
+# CONFIGURATION
+config\config.xml
