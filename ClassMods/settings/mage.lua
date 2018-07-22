@@ -282,15 +282,6 @@ ClassMods.alertDefaults = {
 		target = "player",
 		sparkles = true
 	},
-	[select(1, GetSpellInfo(79683))] = { -- Arcane Missiles!
-		enabled = true,
-		alerttype = "BUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 79683,
-		target = "player",
-		sparkles = true
-	},
 }
 
 --

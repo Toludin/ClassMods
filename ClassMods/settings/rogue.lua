@@ -40,7 +40,7 @@ ClassMods.ticks = {
 		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
 	},
 	[2] = { -- Outlaw
-		{ true,		193315,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Saber Slash
+		{ true,		193315,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Sinister Strike
 		{ true,		193316,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Roll the Bones
 		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
 		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
@@ -85,7 +85,7 @@ ClassMods.classSpells = {
 		{ 199804,	35,	SPELL_POWER_ENERGY }, -- Between the Eyes
 		{ 2098,		35,	SPELL_POWER_ENERGY }, -- Run Through
 		{ 185763,	40,	SPELL_POWER_ENERGY }, -- Pistol Shot
-		{ 193315,	50,	SPELL_POWER_ENERGY }, -- Saber Slash
+		{ 193315,	45,	SPELL_POWER_ENERGY }, -- Sinister Strike
 		{ 8676,		60,	SPELL_POWER_ENERGY }, -- Ambush
 		{ 1966,		20,	SPELL_POWER_ENERGY }, -- Feint
 		{ 152150,	25,	SPELL_POWER_ENERGY }, -- Death from Above
@@ -94,7 +94,7 @@ ClassMods.classSpells = {
 	[3] = { -- Subtlety
 		{ 195452,	25,	SPELL_POWER_ENERGY }, -- Nightblade
 		{ 206237,	30,	SPELL_POWER_ENERGY }, -- Enveloping Shadows
-		{ 53,			35,	SPELL_POWER_ENERGY }, -- Backstab
+		{ 53,		35,	SPELL_POWER_ENERGY }, -- Backstab
 		{ 196819,	35,	SPELL_POWER_ENERGY }, -- Eviscerate
 		{ 197835,	35,	SPELL_POWER_ENERGY }, -- Shuriken Storm
 		{ 200758,	35,	SPELL_POWER_ENERGY }, -- Gloomblade
@@ -135,11 +135,11 @@ ClassMods.stacks = {
 }
 
 ClassMods.rollTheBones = { 
-	193357, -- Shark Infested Waters
+	193357, -- Ruthless Precision
 	193358, -- Grand Melee
 	193359, -- True Bearing
 	193356, -- Broadsides
-	199603, -- Jolly Roger
+	199603, -- Skull and Crossbones
 	199600, -- Buried Treasure
 }
 
@@ -395,8 +395,8 @@ ClassMods.enableCrowdControl = true
 -- TODO: UPDATE THE NON DR PVP DURATIONS
 ClassMods.crowdControlSpells = {
 --	{ 1,			2,		 3,			4,		5   }, -- index
-	{ 199743,	true, 199743,	300,	30 },	-- Parley
-	{ 199740,	true, 199740,	300,	30 },	-- Bribe
+	--{ 199743,	true, 199743,	300,	30 },	-- Parley
+	--{ 199740,	true, 199740,	300,	30 },	-- Bribe
 	{ 6770,		true, 6770,		60,	30 },	-- Sap
 	{ 2094,		true, 2094,		60,	30 },	-- Blind
 }

@@ -605,7 +605,7 @@ function ClassMods.SetupResourceBar()
 						local numBuffs = 0
 						for i=1,#ClassMods.rollTheBones do
 							local buffIndex = ClassMods.getAuraIndex("player", GetSpellInfo(ClassMods.rollTheBones[i]), "HELPFUL")
-							if (UnitAura("player", buffIndex, "HELPFUL")) then
+							if buffIndex and (UnitAura("player", buffIndex, "HELPFUL")) then
 								numBuffs = numBuffs + 1
 							end
 						end

@@ -8,6 +8,16 @@ local L = LibStub("AceLocale-3.0"):GetLocale("ClassMods")
 -- Setup Alternate Resource Bar
 --
 
+local powerTypeLookup = {
+	["COMBO_POINTS"] = 4,
+	["RUNES"] = 5,
+	["SOUL_SHARDS"] = 7,
+	["HOLY_POWER"] = 9,
+	["CHI"] = 12,
+	["ARCANE_CHARGES"] = 16,
+}
+	
+
 local function addRuneTimer(runeIndex, start, duration)
 	ClassMods.F.AltResourceBar.Icon[runeIndex].Texture:ClearAllPoints()
 	ClassMods.F.AltResourceBar.Icon[runeIndex].Texture:SetAllPoints(ClassMods.F.AltResourceBar.Icon[runeIndex])
@@ -173,7 +183,7 @@ function ClassMods.SetupAltResourceBar()
 				end
 
 				if (playerClass == "DRUID") then 
-					if (UnitPowerType("player") == SPELL_POWER_ENERGY) then
+					if (UnitPowerType("player") == 3) then -- Energy
 						ClassMods.F.AltResourceBar.Icon[i]:Show()
 					else
 						ClassMods.F.AltResourceBar.Icon[i]:Hide()
@@ -235,7 +245,7 @@ function ClassMods.SetupAltResourceBar()
 				elseif (event == "UNIT_POWER_FREQUENT") then
 					if (playerClass == "MONK") and (playerSpec ~= 3) then return end -- not a Windwalker Monk (CHI still fires for the other specs >.<)
 					if ((arg2 == "COMBO_POINTS") or (arg2 == "ARCANE_CHARGES") or (arg2 == "CHI") or (arg2 == "HOLY_POWER") or (arg2 == "SOUL_SHARDS")) then
-						local numPoints = UnitPower("player", _G["SPELL_POWER_"..arg2])
+						local numPoints = UnitPower("player", powerTypeLookup[arg2])
 						for i=1,numPoints do
 							if (not ClassMods.F.AltResourceBar.Icon[i].Active) then
 								ClassMods.F.AltResourceBar.Icon[i].Active = true
