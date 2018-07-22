@@ -1,4 +1,4 @@
-﻿## Interface: 70300
+﻿## Interface: 80000
 ## Title: |cffFF4500ClassMods|r v7.3.0.1
 ## Notes: ClassMods is based on the concepts of JSHB by _JS_
 ## Version: v7.3.0.1
@@ -6,6 +6,7 @@
 ## LoadOnDemand: 0
 ## DefaultState: enabled
 ## Author: Kaelyth @ Dath'Remar
+## Fixer: Toludin @ Stormrage
 ## X-Credits: JSHB4 creator _JS_
 ## X-Website: http://jshbclassmods.proboards.com
 ## X-Embeds: Ace3
