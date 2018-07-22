@@ -61,7 +61,7 @@ function ClassMods.SetupAltResourceBar()
 		iconTexture = "Interface\\PlayerFrame\\ClassOverlayComboPoints"
 		atlasOn = "ClassOverlay-ComboPoint"
 		atlasOff = "ClassOverlay-ComboPoint-Off"
-		numIcons = UnitPowerMax("player", SPELL_POWER_COMBO_POINTS)
+		numIcons = UnitPowerMax("player", 4) -- Combo Points
 	--MAGE
 	elseif (playerClass == "MAGE") then
 		iconTexture = "Interface\\PlayerFrame\\MageArcaneCharges"
@@ -73,7 +73,7 @@ function ClassMods.SetupAltResourceBar()
 		iconTexture = "Interface\\PlayerFrame\\MonkUI"
 		atlasOn = "MonkUI-LightOrb"
 		atlasOff = "MonkUI-OrbOff"
-		numIcons = UnitPowerMax("player", SPELL_POWER_CHI)
+		numIcons = UnitPowerMax("player", 12) -- Chi
 	--PALADIN
 	elseif (playerClass == "PALADIN") and (playerSpec == 3) then -- Retribution Paladin
 		iconTexture = "Interface\\PlayerFrame\\ClassOverlayHolyPower"
