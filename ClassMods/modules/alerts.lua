@@ -18,16 +18,14 @@ ClassMods.totalAlertIcons = 0
 local function checkTargetForAlert(caller, target)
 	if(caller.alertTrigger == _Debuff) then
 		local buffIndex = ClassMods.getAuraIndex(target, caller.checkID and GetSpellInfo(caller.checkID) or caller.checkName, "HARMFUL")
-		if buffIndex then
-			caller.___name, caller.___texture, caller.___stacks, caller.____, caller.___duration, caller.___expires = UnitAura(target, buffIndex, "HARMFUL")
-			caller.___calculatedRemaining = caller.___expires and (caller.___expires - GetTime() ) or 0
-		end
+		if not buffIndex then return end
+		caller.___name, caller.___texture, caller.___stacks, caller.____, caller.___duration, caller.___expires = UnitAura(target, buffIndex, "HARMFUL")
+		caller.___calculatedRemaining = caller.___expires and (caller.___expires - GetTime() ) or 0
 	elseif(caller.alertTrigger == _Buff) then
 		local buffIndex = ClassMods.getAuraIndex(target, caller.checkID and GetSpellInfo(caller.checkID) or caller.checkName, "HELPFUL")
-		if buffIndex then
-			caller.___name, caller.___texture, caller.___stacks, caller.____, caller.___duration, caller.___expires = UnitAura(target, buffIndex, "HELPFUL")
-			caller.___calculatedRemaining = caller.___expires and (caller.___expires - GetTime() ) or 0
-		end
+		if not buffIndex then return end
+		caller.___name, caller.___texture, caller.___stacks, caller.____, caller.___duration, caller.___expires = UnitAura(target, buffIndex, "HELPFUL")
+		caller.___calculatedRemaining = caller.___expires and (caller.___expires - GetTime() ) or 0
 	elseif(caller.alertTrigger == _Cast) then
 		caller.___name, caller.____, caller.____, caller.___texture, caller.____, caller.___endTime = UnitCastingInfo(target)
 		if(caller.___name) then
