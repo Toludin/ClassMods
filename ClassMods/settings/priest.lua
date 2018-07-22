@@ -12,12 +12,17 @@ if (select(2, UnitClass("player")) ~= "PRIEST") then return end
 ClassMods.enableprediction = true
 ClassMods.powerGenerationSpells = {
 	[3] = { -- Shadow
-		{ 8092,		12},	--	Mind Blast
-		{ 73510,	4	},	--	Mind Spike
-		{ 34914,	4	},	--	Vampiric Touch
-		{ 48045,	6	},	--	Mind Sear
-		{ 15407,	8	},	--	Mind Flay
-		{ 205351,	25},	--	Shadow Word: Void
+		{ 8092,		12 },	--	Mind Blast
+		{ 589,	    4  },	--	Shadow Word: Pain
+		{ 34914,	6  },	--	Vampiric Touch
+		{ 48045,	5  },	--	Mind Sear
+		{ 15407,	12 },	--	Mind Flay
+		{ 228266,	16 },	--	Void Bolt
+		{ 205351,	15 },	--	Shadow Word: Void
+		{ 263346,   30 },   --  Dark Void
+        { 205385,   20 },   --  Shadow Crash 		
+		{ 32379,    15 },   --  Shadow Word: Death - 15 on normal, 30 on kill
+		{ 280711,   50 },   --  Dark Ascension
 	},
 }
 
@@ -106,9 +111,9 @@ ClassMods.stacks = {
 		{ false,	41635,		"target",	5, "AtMax",	"aura"		}, -- Prayer of Mending
 	},
 	[3] = { -- Shadow
-		{ true,		32379,		"player",	2, "AtMax",	"charge"	}, -- Shadow Word: Death
-		{ false,	205351,	"player",	3, "AtMax",	"charge"	}, -- Shadow Word: Void
-		{ false,	205372,	"player",	5,	"AtMax",	"aura"		}, -- Void Ray
+		{ true,		32379,   "player",	2, "AtMax",	"charge"	}, -- Shadow Word: Death
+		{ false,    205351,  "player",	2, "AtMax",	"charge"	}, -- Shadow Word: Void
+		--{ false,	205372,  "player",	5, "AtMax", "aura"	    }, -- Void Ray		
 	},
 }
 
@@ -189,7 +194,7 @@ ClassMods.timerbarDefaults = {
 		{ 193223,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   37,	0.5 },	--	Surrender to Madness
 		{ 64901,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   38,	0.5 },	--	Symbol of Hope
 		{ 15286,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   39,	0.5 },	--	Vampiric Embrace
-		{ 228260,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   40,	0.5 },	--	Void Erruption
+		{ 228260,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   40,	0.5 },	--	Void Eruption
 	},
 	["timerbar2"] = {
 	--	{ 1,			2,		3,				4,					5,					6,	7,				8,		9,		10,	11,	12,	13,	14,  15,16, 17, 18,	19,	20  },	-- Index
