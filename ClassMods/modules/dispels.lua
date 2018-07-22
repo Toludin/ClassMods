@@ -176,7 +176,7 @@ function ClassMods.SetupDispels(lockName)
 					function(self)
 						if (self.spellID == 0) then return end
 							for index=1,40 do
-								if (select(11, UnitBuff("target", index) ) == self.spellID) then
+								if (select(10, UnitBuff("target", index) ) == self.spellID) then
 									GameTooltip:SetOwner(self)
 									GameTooltip:SetUnitBuff("target", index)
 									GameTooltip:Show()
