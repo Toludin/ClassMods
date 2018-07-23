@@ -15,7 +15,7 @@ function ClassMods.Options:Panel_Main(ord)
 				order = 2,
 				type = "description",
 				fontSize = "medium",
-				name = L["CLASSMODS"] .. " " .. ClassMods.myVersionRaw .. ": " .. L["Official Support:"] .. " |cffabd473http://jshbclassmods.proboards.com/|r\n\n" .. L["OPTIONSINTRO"] .. "\n\n" .. L["MOVEFRAMES"],
+				name = L["CLASSMODS"] .. " " .. ClassMods.myVersionRaw.."\n\n" .. L["OPTIONSINTRO"] .. "\n\n" .. L["MOVEFRAMES"],
 			},
 			spacer4 = { order=4, type="description", name=" ", desc=" ", width="full"},
 			framelock = {
