@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Arms
 	--	{ 1,      	2,          	3,      	4,        5,            6, 							  7       },	-- index
-		{ true,		12294,		true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },	-- Mortal Strike
-		{ true,		163201,	true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },	-- Execute
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
+		{ true,		12294,		true,	false, {1,1,1,1}, 1, false },	-- Mortal Strike
+		{ true,		163201,	true,	false, {1,1,1,1}, 1, false },	-- Execute
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
 	},
 	[2] = { -- Fury
-		{ true,		5308,		true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false }, -- Execute
-		{ true,		184367,	false,	false, {1,1,1,1}, SPELL_POWER_RAGE, false }, -- Rampage
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
+		{ true,		184367,			false,  false, {1,1,1,1}, 1, false }, -- Rampage
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
 	},
 	[3] = { -- Protection
-		{ true,		204488,	true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false }, -- Focused Rage
-		{ true,		190456,	true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false }, -- Ignore Pain
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
-		{ false,	nil,			true,	false, {1,1,1,1}, SPELL_POWER_RAGE, false },
+		{ true,		204488,	true,	false, {1,1,1,1}, 1, false }, -- Focused Rage
+		{ true,		190456,	true,	false, {1,1,1,1}, 1, false }, -- Ignore Pain
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
+		{ false,	nil,			true,	false, {1,1,1,1}, 1, false },
 	},
 }
 
@@ -65,26 +65,25 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Arms
 	--	{ 1,			2,	 3,							 }, -- index
-		{ 845,		10, SPELL_POWER_RAGE }, --	Cleave
-		{ 1715,		10, SPELL_POWER_RAGE }, --	Hamstring
-		{ 7384,		10, SPELL_POWER_RAGE }, --	Overpower
-		{ 163201,	40, SPELL_POWER_RAGE }, --	Execute
-		{ 207982,	15, SPELL_POWER_RAGE }, --	Focused Rage
-		{ 772,		15, SPELL_POWER_RAGE }, --	Rend
-		{ 1464,		15, SPELL_POWER_RAGE }, --	Slam
-		{ 12294,	20, SPELL_POWER_RAGE }, --	Mortal Strike
-		{ 1680,		25, SPELL_POWER_RAGE }, --	Whirlwind
+		{ 845,		20, 1 }, --	Cleave
+		{ 1715,		10, 1 }, --	Hamstring
+		{ 163201,	40, 1 }, --	Execute
+		{ 772,		30, 1 }, --	Rend
+		{ 1464,		20, 1 }, --	Slam
+		{ 12294,	30, 1 }, --	Mortal Strike
+		{ 1680,		30, 1 }, --	Whirlwind
+		{ 202168,	10, 1 }, --	Impending Victory
 	},
 	[2] = { -- Fury
-		{ 12323,	10, SPELL_POWER_RAGE }, -- Piercing Howl
-		{ 5308,		25, SPELL_POWER_RAGE }, -- Execute
-		{ 184367,	85, SPELL_POWER_RAGE }, -- Rampage
+		{ 202168,	10, 1 }, --	Impending Victory
+		{ 12323,	10, 1 }, -- Piercing Howl
+		{ 184367,	85, 1 }, -- Rampage
 	},
 	[3] = { -- Protection
-		{ 202168,	10, SPELL_POWER_RAGE }, --	Impending Victory
-		{ 2565,		10, SPELL_POWER_RAGE }, --	Shield Block
-		{ 190456,	60, SPELL_POWER_RAGE }, --	Ignore Pain
-		{ 204488,	30, SPELL_POWER_RAGE }, --	Focused Rage
+		{ 202168,	10, 1 }, --	Impending Victory
+		{ 2565,		30, 1 }, --	Shield Block
+		{ 190456,	40, 1 }, --	Ignore Pain
+		{ 6572,		30, 1 }, -- Revenge
 	},
 }
 
@@ -112,11 +111,10 @@ ClassMods.stacks = {
 	},
 	[2] = { -- Fury
 		{ false,	100,			"player", 2, "AtMax",	"charge"	}, -- Charge
-		{ true,		206333,	"player", 6, "AtMax",	"aura"		}, -- Taste for Blood
-		{ false,	202539,	"player", 3, "AtMax",	"aura"		}, -- Frenzy
+		{ true,	202539,	"player", 3, "AtMax",	"aura"		}, -- Furious Slash
 	},
 	[3] = { -- Protection
-		{ true,		204488,	"player", 3, "AtMax",	"aura"		}, --	Focused Rage
+		{ true,		2565,	"player", 2, "AtMax",	"charge"	}, --	Shield Block
 		{ false,	198304,	"player", 2, "AtMax",	"charge"	}, --	Intercept
 		{ false,	202602,	"player", 5, "AtMax",	"aura"		}, --	Into the Fray
 	},
@@ -224,7 +222,7 @@ ClassMods.timerbarDefaults = {
 		{ 871,		nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   25,	0.5 },	--	Shield Wall
 		{ 23920,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   26,	0.5 },	--	Spell Reflection
 		{ 206333,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   27,	0.5 },	--	Taste for Blood
-		{ 122510,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   28,	0.5 },	--	Ultimatum
+		{ 5302,		nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   28,	0.5 },	--	Revenge!
 		{ 202573,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   29,	0.5 },	--	Vengence: Focused Rage
 		{ 202574,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   30,	0.5 },	--	Vengence: Ignore Pain
 		{ 32216,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   31,	0.5 },	--	Victory Rush
@@ -279,24 +277,6 @@ ClassMods.alertDefaults = {
 		target = "player",
 		sparkles = true
 	},
-	[select(1, GetSpellInfo(215572))] = { -- Frothing Berserker
-		enabled = true,
-		alerttype = "BUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 215572,
-		target = "player",
-		sparkles = true
-	},
-	[select(1, GetSpellInfo(206316))] = { -- Massacre
-		enabled = true,
-		alerttype = "BUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 206316,
-		target = "player",
-		sparkles = true
-	},
 	[select(1, GetSpellInfo(60503))] = { -- Overpower!
 		enabled = true,
 		alerttype = "BUFF",
@@ -306,12 +286,12 @@ ClassMods.alertDefaults = {
 		target = "player",
 		sparkles = true
 	},
-	[select(1, GetSpellInfo(122510))] = { -- Ultimatum 
+	[select(1, GetSpellInfo(5302))] = { -- Revenge!
 		enabled = true,
 		alerttype = "BUFF",
 		enablesound = true,
 		sound = "Ding",
-		aura = 122510,
+		aura = 5302,
 		target = "player",
 		sparkles = true
 	},

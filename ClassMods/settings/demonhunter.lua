@@ -32,18 +32,18 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Havoc
 	--	{ 1,      	2,          	3,      4,        5,            6, 							  7       },	-- index
-		{ true,		162794,	true, false, {1,1,1,1}, SPELL_POWER_FURY, false },	-- Chaos Strike
-		{ true,		198013,	true, false, {1,1,1,1}, SPELL_POWER_FURY, false },	-- Eye Beam
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FURY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FURY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FURY, false },
+		{ true,		162794,	true, false, {1,1,1,1}, 17, false },	-- Chaos Strike
+		{ true,		198013,	true, false, {1,1,1,1}, 17, false },	-- Eye Beam
+		{ false,	188499,			true, false, {1,1,1,1}, 17, false }, -- Blade Dance
+		{ false,	nil,			true, false, {1,1,1,1}, 17, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 17, false },
 	},
 	[2] = { -- Vengence
-		{ true,		203720,	true, false, {1,1,1,1}, SPELL_POWER_PAIN, false }, -- Demon Spikes
-		{ true,		228477,	true, false, {1,1,1,1}, SPELL_POWER_PAIN, false }, -- Soul Cleave
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_PAIN, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_PAIN, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_PAIN, false },
+		{ true,		228477,			true, false, {1,1,1,1}, 18, false }, -- Soul Cleave
+		{ false,	247454,			true, false, {1,1,1,1}, 18, false }, -- Spirit Bomb
+		{ false,	nil,			true, false, {1,1,1,1}, 18, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 18, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 18, false },
 	},
 }
 
@@ -57,18 +57,18 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Havoc
 	--	{ 1,			2,		3,							   }, -- index
-		{ 188499,	35,	SPELL_POWER_FURY }, -- Blade Dance
-		{ 179057,	30,	SPELL_POWER_FURY }, -- Chaos Nova
-		{ 162794,	40,	SPELL_POWER_FURY }, -- Chaos Strike
-		{ 198013,	50,	SPELL_POWER_FURY }, -- Eye Beam
-		{ 211881,	20,	SPELL_POWER_FURY }, -- Fel Eruption
+		{ 188499,	35,	17 }, -- Blade Dance
+		{ 179057,	30,	17 }, -- Chaos Nova
+		{ 162794,	40,	17 }, -- Chaos Strike
+		{ 198013,	30,	17 }, -- Eye Beam
+		{ 211881,	10,	17 }, -- Fel Eruption
 	},
 	[2] = { -- Vengence
-		{ 203720,	20,	SPELL_POWER_PAIN }, -- Demon Spikes
-		{ 228477,	30,	SPELL_POWER_PAIN }, -- Soul Cleave
-		{ 211881,	10,	SPELL_POWER_PAIN }, -- Fel Eruption
-		{ 212084,	30,	SPELL_POWER_PAIN }, -- Fel Devastation
-		{ 227225,	30,	SPELL_POWER_PAIN }, -- Soul Barrier
+		{ 228477,	30,	18 }, -- Soul Cleave
+		{ 247454,	30,	18 }, -- Spirit Bomb
+		{ 211881,	10,	18 }, -- Fel Eruption
+		{ 212084,	30,	18 }, -- Fel Devastation
+		{ 227225,	30,	18 }, -- Soul Barrier
 	},
 }
 
@@ -96,6 +96,7 @@ ClassMods.stacks = {
 		{ true,		203981,	"player",	5, "AtMax",	"aura"   		}, -- Soul Fragments
 		{ false,	203720,	"player",	2, "AtMax",	"charge"		}, -- Demon Spikes
 		{ false,	189110,	"player",	2, "AtMax",	"charge"   		}, -- Infernal Strike
+		{ false,	263642,	"player",	2, "AtMax",	"charge"   		}, -- Fracture
 
 	},
 }

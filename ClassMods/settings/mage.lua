@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Arcane
 	--	{ 1,       2,    3,     4,        5,            6, 							  7       },	-- index
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 	[2] = { -- Fire
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 	[3] = { -- Frost
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 }
 

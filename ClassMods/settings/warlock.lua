@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Affliction
 	--	{ 1,       2,    3,     4,        5,            6, 							  7       },	-- index
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 	[2] = { -- Demonology
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 	[3] = { -- Destruction
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 }
 
@@ -81,13 +81,13 @@ ClassMods.stacks
 ClassMods.stacks = {
 	[1] = { -- Affliction
 	--	{ 1,			2,				3,				4,	5, 			6				}, -- index
-		{ false,	nil,			nil,			0,	nil,			nil			},
+		{ false,	32390,	"target",	3,	"AtMax",	"aura"		}, -- Shadow Embrace
 	},
 	[2] = { -- Demonology
-		{ true,		205181,	"player",	2, "AtMax",	"charge"	}, -- Shadowflame
+		{ true,		205181,	"player",	2, 	"AtMax",	"charge"	}, -- Shadowflame
 	},
 	[3] = { -- Destruction
-		{ true,		17962,		"player",	2,	"AtMax",	"charge"	}, -- Conflagrate
+		{ true,		17962,	"player",	2,	"AtMax",	"charge"	}, -- Conflagrate
 	},
 }
 
@@ -333,7 +333,6 @@ ClassMods.totems
 
 ClassMods.enableTotems = true
 ClassMods.totems = {
-	{ true, 205178,	600	}, --	Soul Effigy
 	{ true, 104316,	12	}, --	Call Dreadstalkers
 	{ true, 105174,	12	}, --	Hand of Gul'dan
 	{ true, 205180,	12	}, --	Summon Darkglare

@@ -40,25 +40,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Elemental
 	--	{ 1,      	2,         	3,      4,        5,            6, 											7	 	 }, -- index
-		{ true,		188389,	true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, -- Flame Shock
-		{ false,	196840,	true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, -- Frost Shock
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
+		{ true,		8042,			true, false, {1,1,1,1}, 11,	false }, -- Earth Shock
+		{ false,	61882,			true, false, {1,1,1,1}, 11,	false }, -- Earthquake
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
 	},
 	[2] = { -- Enhancement
-		{ true,		17364,		true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, -- Stormstrike
-		{ true,		60103,		true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, -- Lava Lash
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
+		{ true,		17364,			true, false, {1,1,1,1}, 11,	false }, -- Stormstrike
+		{ true,		60103,			true, false, {1,1,1,1}, 11,	false }, -- Lava Lash
+		{ false,	187874,			true, false, {1,1,1,1}, 11,	false }, -- Crash Lightning
+		{ false,	196834,			true, false, {1,1,1,1}, 11,	false }, -- Frostbrand
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
 	},
 	[3] = { -- Restoration
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MAELSTROM,	false }, --		
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --
+		{ false,	nil,			true, false, {1,1,1,1}, 11,	false }, --		
 	},
 }
 
@@ -72,15 +72,14 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Elemental
 	--	{ 1,			2,	  3										}, -- index
-		{ 188389,	20, SPELL_POWER_MAELSTROM	}, -- Flame Shock
-		{ 196840,	20, SPELL_POWER_MAELSTROM	}, -- Frost Shock
-		{ 8042,		10, SPELL_POWER_MAELSTROM	}, -- Earth Shock
+		{ 61882,	60, 11	}, -- Earthquake
+		{ 8042,		60, 11	}, -- Earth Shock
 	},
 	[2] = { -- Enhancement
-		{ 187874,	20, SPELL_POWER_MAELSTROM	}, -- Crash Lightning
-		{ 196834,	20, SPELL_POWER_MAELSTROM	}, -- Frostbrand
-		{ 60103,	30, SPELL_POWER_MAELSTROM	}, -- Lava Lash
-		{ 17364,	40, SPELL_POWER_MAELSTROM	}, -- Stormstrike
+		{ 187874,	20, 11	}, -- Crash Lightning
+		{ 196834,	20, 11	}, -- Frostbrand
+		{ 60103,	40, 11	}, -- Lava Lash
+		{ 17364,	30, 11	}, -- Stormstrike
 	},
 	[3] = {}, -- Restoration
 }
@@ -102,16 +101,16 @@ ClassMods.stacks
 ClassMods.stacks = {
 	[1] = { -- Elemental
 	--	{ 1,			2,				3,				4,	5, 			6				}, -- index
-		{ true,		16164,		"player",	2, "AtMax",	"aura"		}, -- Elemental Focus
 		{ false,	210714,	"player",	4, "Always",	"aura"		}, -- Icefury
 		{ false,	51505,		"player",	2,	"AtMax",	"charge"	}, -- Lava Burst (Echo of Elements)
 	},
 	[2] = { -- Enhancement
-		{ true,		201846,	"player",	2, "Always",	"aura"		}, -- Stormbringer (Tempest)
+		{ false,	nil,	nil,	0,	nil,	nil}, -- 
 	},
 	[3] = { -- Restoration
 		{ true,		53390,		"player",	2, "AtMax",	"aura"		}, -- Tidal Waves
-		{ false,	5394,		"player",	2, "AtMax",	"charge"	}, -- Healing Stream Totem
+		{ false,	5394,		"player",	2, "AtMax",	"charge"	}, -- Healing Stream Totem (Echo)
+		{ false,	157153,		"player",	2, "AtMax",	"charge"	}, -- Cloudburst Totem (Echo)
 		{ false,	61295,		"player",	2, "AtMax",	"charge"	}, -- Riptide
 		{ false,	51505,		"player",	2, "AtMax",	"charge"	}, -- Lava Burst
 	},
@@ -171,10 +170,10 @@ ClassMods.timerbarDefaults = {
 		{ 114050,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   14,	0.5 },	--	Acendance (Elemental)
 		{ 114051,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   15,	0.5 },	--	Acendance (Enhancement)
 		{ 114052,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   16,	0.5 },	--	Acendance (Restoration)
-		{ 108281,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   17,	0.5 },	--	Ancestral Guidence
+		{ 108281,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   17,	0.5 },	--	Ancestral Guidance
 		{ 108271,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   18,	0.5 },	--	Astral Shift
 		{ 157153,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   19,	0.5 },	--	Cloudburst Totem
-		{ 198838,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   20,	0.5 },	--	Earthen Shield Totem
+		{ 198838,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   20,	0.5 },	--	Earthen Wall Totem
 		{ 188089,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   21,	0.5 },	--	Earthen Spike
 		{ 51485,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   22,	0.5 },	--	Earthgrab Totem
 		{ 61882,	nil,	"player",	"COOLDOWN",	"PLAYERS",	0,	"CENTER",	nil,	true,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   23,	0.5 },	--	Earthquake Totem
@@ -209,11 +208,10 @@ ClassMods.timerbarDefaults = {
 	["timerbar2"] = {
 	--	{ 1,			2,		3,				4,					5,					6,	7,				8,		9,		10,	11,	12,	13,	14,  15,16, 17, 18,	19,	20  },	-- Index
 		{ 53390,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   1,	0.5 },	--	Tidal Waves
-		{ 16164,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   2,	0.5 },	-- Elemental Focus
 		{ 198103,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   3,	0.5 },	-- Earth Elemental
 		{ 198067,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   4,	0.5 },	-- Fire Elemental
 		{ 210714,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   5,	0.5 },	--	Icefury
-		{ 108281,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   6,	0.5 },	--	Ancestral Guidence
+		{ 108281,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   6,	0.5 },	--	Ancestral Guidance
 		{ 215785,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   7,	0.5 },	--	Hot Hand
 		{ 77762,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   8,	0.5 },	--	Lava Surge
 		{ 201846,	nil,	"player",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   9,	0.5 },	--	Stormbringer
@@ -242,7 +240,6 @@ ClassMods.timerbarDefaults = {
 	},
 	["timerbar3"] = {
 	--	{ 1,			2,		3,				4,					5,					6,	7,				8,		9,		10,	11,	12,	13,	14,  15,16, 17, 18,	19,	20  },	-- Index
-		{ 197209,	nil,	"target",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   1,	0.5 },	--	Lightning Rod
 		{ 51514,	nil,	"target",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   2,	0.5 },	--	Hex
 		{ 207400,	nil,	"target",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   3,	0.5 },	--	Ancestral Vigor
 		{ 116947,	nil,	"target",	"DURATION",	"PLAYERS",	0,	"CENTER",	nil,	nil,	nil,	nil,	nil,	nil,	0.4,	1,	0,	nil,	1,   4,	0.5 },	--	Earthbind
@@ -275,21 +272,12 @@ ClassMods.spellTrackerSpells = {}
 ClassMods.pethealthtexture = nil
 ClassMods.alertDefaults = {
 	["Player Health Alert"]	= { enabled = true, alerttype = "HEALTH", enablesound = true, sound = "Raid Warning", aura = "", target = "player", sparkles = true, healthpercent = 0.3 },
-	[select(1, GetSpellInfo(108281))] = {	--	Ancestral Guidence
+	[select(1, GetSpellInfo(108281))] = {	--	Ancestral Guidance
 		enabled = true,
 		alerttype = "BUFF",
 		enablesound = true,
 		sound = "Ding",
 		aura = 108281,
-		target = "player",
-		sparkles = true
-	},
-	[select(1, GetSpellInfo(16164))] = {	--	Elemental Focus
-		enabled = true,
-		alerttype = "BUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 16164,
 		target = "player",
 		sparkles = true
 	},
@@ -309,15 +297,6 @@ ClassMods.alertDefaults = {
 		sound = "Ding",
 		aura = 77762,
 		target = "player",
-		sparkles = true
-	},
-	[select(1, GetSpellInfo(197209))] = {	--	Lightning Rod
-		enabled = true,
-		alerttype = "DEBUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 197209,
-		target = "target",
 		sparkles = true
 	},
 	[select(1, GetSpellInfo(201846))] = {	--	Stormbringer
@@ -457,15 +436,14 @@ ClassMods.totems
 
 ClassMods.enableTotems = true
 ClassMods.totems = {
-	{ true, 51485,	20 }, 	-- Earthgrab Totem
-	{ true, 61882,	10 },		-- Earthquake Totem
-	{ true, 192222,	15 },		--	Liquid Magma Totem
-	{ true, 196932,	10 },		--	Voodoo Totem
-	{ true, 192077,	15 },		--	Wind Rush Totem
+	{ true, 51485,	20 }, 	--  Earthgrab Totem
+	{ true, 61882,	6 },	--  Earthquake
+	{ true, 192222,	15 },	--	Liquid Magma Totem
+	{ true, 192077,	15 },	--	Wind Rush Totem
 	{ true, 210643,	120},	--	Totem Mastery
 	{ true, 207399,	30 }, 	--	Ancestral Protection Totem
 	{ true, 157153,	15 }, 	--	Cloudburst Totem
-	{ true, 198838,	15 }, 	--	Earthen Shield Totem
+	{ true, 198838,	15 }, 	--	Earthen Wall Totem
 	{ true, 5394,	15 }, 	--	Healing Stream Totem
 	{ true, 108280,	10 }, 	--	Healing Tide Totem
 	{ true, 98008,	6	}, 	--	Spirit Link Totem

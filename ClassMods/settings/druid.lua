@@ -13,10 +13,11 @@ ClassMods.enableprediction = true
 ClassMods.powerGenerationSpells = {
 	[1] = { -- Balance
 		{ 194153,	12 	}, -- Lunar Strike
-		{ 190984,	8		}, -- Solar Wrath
-		{ 202767,	10	}, --	New Moon
-		{ 202768,	20	}, --	Half Moon
-		{ 202771,	40	}, --	Full Moon
+		{ 190984,	8	}, -- Solar Wrath
+		{ 203347,	8	}, -- Stellar Flare
+		{ 274281,	10	}, --	New Moon
+		{ 274282,	20	}, --	Half Moon
+		{ 274283,	40	}, --	Full Moon
 	},
 }
 
@@ -42,32 +43,32 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Balance
 	--	{ 1,      2,          	3,      4,        5,            6, 												7		 },	-- index
-		{ true,	78674,			false, false, {1,1,1,1}, SPELL_POWER_LUNAR_POWER,	false }, -- Starsurge
-		{ true,	191034,		false, false, {1,1,1,1}, SPELL_POWER_LUNAR_POWER,	false }, -- Starfall
-		{ true,	5221,			false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Shred
-		{ true,	1079,			false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Rip
-		{ true,	22842,			false, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Frenzied Regeneration
+		{ true,	78674,			false, false, {1,1,1,1}, 8,	false }, -- Starsurge
+		{ true,	191034,		false, false, {1,1,1,1}, 8,	false }, -- Starfall
+		{ true,	5221,			false, false, {1,1,1,1}, 3,				false }, -- Shred
+		{ true,	1079,			false, false, {1,1,1,1}, 3,				false }, -- Rip
+		{ true,	22842,			false, false, {1,1,1,1}, 1,					false }, -- Frenzied Regeneration
 	},
 	[2] = { -- Feral
-		{ true,		5221,		true, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Shred
-		{ true,		1079,		true, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Rip 
-		{ true,		52610,		true, false, {1,1,1,1}, SPELL_POWER_ENERGY, 				false }, -- Savage Roar
-		{ true,		22842,		false, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Frenzied Regeneration
-		{ true,		192081,	false, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Ironfur
+		{ true,		5221,		true, false, {1,1,1,1}, 3,				false }, -- Shred
+		{ true,		1079,		true, false, {1,1,1,1}, 3,				false }, -- Rip 
+		{ true,		52610,		true, false, {1,1,1,1}, 3, 				false }, -- Savage Roar
+		{ true,		22842,		false, false, {1,1,1,1}, 1,					false }, -- Frenzied Regeneration
+		{ true,		192081,	false, false, {1,1,1,1}, 1,					false }, -- Ironfur
 	},
 	[3] = { -- Guardian
-		{ true,		22842,		true, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Frenzied Regeneration
-		{ true,		192081,	true, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Ironfur
-		{ true,		6807,		true, false, {1,1,1,1}, SPELL_POWER_RAGE, 					false }, -- Maul
-		{ true,		5221,		false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Shred
-		{ true,		1079,		false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Rip 
+		{ true,		22842,		true, false, {1,1,1,1}, 1,					false }, -- Frenzied Regeneration
+		{ true,		192081,	true, false, {1,1,1,1}, 1,					false }, -- Ironfur
+		{ true,		6807,		true, false, {1,1,1,1}, 1, 					false }, -- Maul
+		{ true,		5221,		false, false, {1,1,1,1}, 3,				false }, -- Shred
+		{ true,		1079,		false, false, {1,1,1,1}, 3,				false }, -- Rip 
 	},
 	[4] = { -- Restoration
-		{ true,		5221,		false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Shred
-		{ true,		1079,		false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Rip 
-		{ true,		22568,		false, false, {1,1,1,1}, SPELL_POWER_ENERGY,				false }, -- Ferocious Bite
-		{ true,		22842,		false, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Frenzied Regeneration
-		{ true,		192081,	false, false, {1,1,1,1}, SPELL_POWER_RAGE,					false }, -- Ironfur
+		{ true,		5221,		false, false, {1,1,1,1}, 3,				false }, -- Shred
+		{ true,		1079,		false, false, {1,1,1,1}, 3,				false }, -- Rip 
+		{ true,		22568,		false, false, {1,1,1,1}, 3,				false }, -- Ferocious Bite
+		{ true,		22842,		false, false, {1,1,1,1}, 1,					false }, -- Frenzied Regeneration
+		{ true,		192081,	false, false, {1,1,1,1}, 1,					false }, -- Ironfur
 	},
 }
 
@@ -81,44 +82,44 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Balance
 	--	{ 1,			2,   3											}, -- index
-		{ 191034,	60, SPELL_POWER_LUNAR_POWER	}, -- Starfall
-		{ 78674,	40, SPELL_POWER_LUNAR_POWER	}, -- Starsurge
-		{ 202347,	15, SPELL_POWER_LUNAR_POWER	}, -- Stellar Flare
-		{ 106830,	50, SPELL_POWER_ENERGY			}, -- Thrash
-		{ 5221,		40, SPELL_POWER_ENERGY			}, -- Shred
-		{ 106785,	45, SPELL_POWER_ENERGY			}, -- Swipe
-		{ 1079,		30, SPELL_POWER_ENERGY			}, -- Rip
-		{ 22842,	10, SPELL_POWER_RAGE				}, -- Frenzied Regeneration
-		{ 192081,	45, SPELL_POWER_RAGE				}, -- Ironfur
+		{ 191034,	50, 8	}, -- Starfall
+		{ 78674,	40, 8	}, -- Starsurge
+		{ 202347,	15, 8	}, -- Stellar Flare
+		{ 5221,		40, 3	}, -- Shred
+		{ 106785,	40, 3	}, -- Swipe
+		{ 1079,		30, 3	}, -- Rip
+		{ 22842,	10, 1	}, -- Frenzied Regeneration
+		{ 192081,	45, 1	}, -- Ironfur
 	},
 	[2] = { -- Feral
-		{ 202208,	20, SPELL_POWER_ENERGY			}, -- Brutal Slash
-		{ 52610,	25, SPELL_POWER_ENERGY			}, -- Savage Roar
-		{ 22568,	25, SPELL_POWER_ENERGY			}, -- Ferocious Bite
-		{ 1079,		30, SPELL_POWER_ENERGY			}, -- Rip
-		{ 155625,	30, SPELL_POWER_ENERGY			}, -- Moonfire
-		{ 22570,	35, SPELL_POWER_ENERGY			}, -- Maim
-		{ 1822,		35, SPELL_POWER_ENERGY			}, -- Rake
-		{ 5221,		40, SPELL_POWER_ENERGY			}, -- Shred
-		{ 106785,	45, SPELL_POWER_ENERGY			}, -- Swipe
-		{ 106830,	50, SPELL_POWER_ENERGY			}, -- Thrash
-		{ 22842,	10, SPELL_POWER_RAGE				}, -- Frenzied Regeneration
-		{ 192081,	45, SPELL_POWER_RAGE				}, -- Ironfur
+		{ 202208,	30, 3			}, -- Brutal Slash
+		{ 52610,	30, 3			}, -- Savage Roar
+		{ 22568,	25, 3			}, -- Ferocious Bite
+		{ 1079,		30, 3			}, -- Rip
+		{ 155625,	30, 3			}, -- Moonfire
+		{ 22570,	35, 3			}, -- Maim
+		{ 1822,		35, 3			}, -- Rake
+		{ 5221,		40, 3			}, -- Shred
+		{ 106785,	40, 3			}, -- Swipe
+		{ 106830,	45, 3			}, -- Thrash
+		{ 274837,	25, 3			}, -- Feral Frenzy
+		{ 22842,	10, 1			}, -- Frenzied Regeneration
+		{ 192081,	45, 1			}, -- Ironfur
 	},
 	[3] = { -- Guardian
-		{ 6807,		20, SPELL_POWER_RAGE				}, -- Maul
-		{ 22842,	10, SPELL_POWER_RAGE				}, -- Frenzied Regeneration
-		{ 192081,	45, SPELL_POWER_RAGE				}, -- Ironfur
-		{ 5221,		40, SPELL_POWER_ENERGY			}, -- Shred
-		{ 22568,	25, SPELL_POWER_ENERGY			}, -- Ferocious Bite
-		{ 1079,		30, SPELL_POWER_ENERGY			}, -- Rip
+		{ 6807,		45, 1				}, -- Maul
+		{ 22842,	10, 1				}, -- Frenzied Regeneration
+		{ 192081,	45, 1				}, -- Ironfur
+		{ 5221,		40, 3			}, -- Shred
+		{ 22568,	25, 3			}, -- Ferocious Bite
+		{ 1079,		30, 3			}, -- Rip
 	},
 	[4] = { -- Restoration
-		{ 5221,		40, SPELL_POWER_ENERGY			}, -- Shred
-		{ 22568,	25, SPELL_POWER_ENERGY			}, -- Ferocious Bite
-		{ 1079,		30, SPELL_POWER_ENERGY			}, -- Rip
-		{ 22842,	10, SPELL_POWER_RAGE				}, -- Frenzied Regeneration
-		{ 192081,	45, SPELL_POWER_RAGE				}, -- Ironfur
+		{ 5221,		40, 3			}, -- Shred
+		{ 22568,	25, 3			}, -- Ferocious Bite
+		{ 1079,		30, 3			}, -- Rip
+		{ 22842,	10, 1				}, -- Frenzied Regeneration
+		{ 192081,	45, 1				}, -- Ironfur
 	},
 }
 

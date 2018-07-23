@@ -32,25 +32,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Beast Mastery
 	--	{ 1,      	2,          	3,      4,        5,            6, 								7		  },	-- index
-		{ true,		34026,		true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },	-- Kill Command
-		{ true,		193455,	true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },	-- Cobra Shot
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
+		{ true,		34026,		true, false, {1,1,1,1}, 2, false },	-- Kill Command
+		{ true,		193455,	true, false, {1,1,1,1}, 2, false },	-- Cobra Shot
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
 	},
 	[2] = { -- Marksmanship
-		{ true,		185901,	true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false }, -- Marked Shot
-		{ true,		19434,		true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false }, -- Aimed Shot
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
+		{ true,		19434,		true, false, {1,1,1,1}, 2, false }, -- Aimed Shot
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
 	},
 	[3] = { -- Survival
-		{ true,		202800,	true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false }, -- Flanking Strike
-		{ true,		186270,	true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false }, -- Raptor Strike
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_FOCUS, false },
+		{ true,		186270,	true, false, {1,1,1,1}, 2, false }, -- Raptor Strike
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },	
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 2, false },
 	},
 }
 
@@ -64,29 +64,33 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Beast Mastery
 	--	{ 1,			2,		3,								 }, -- index
-		{ 131894,	30,	SPELL_POWER_FOCUS }, -- A Murder of Crows
-		{ 120360,	60,	SPELL_POWER_FOCUS }, -- Barrage
-		{ 193455,	40,	SPELL_POWER_FOCUS }, -- Cobra Shot
-		{ 34026,	30,	SPELL_POWER_FOCUS }, -- Kill Command
-		{ 2643, 	40,	SPELL_POWER_FOCUS }, -- Multi-Shot
-
+		{ 131894,	30,	2 }, -- A Murder of Crows
+		{ 120360,	60,	2 }, -- Barrage
+		{ 193455,	35,	2 }, -- Cobra Shot
+		{ 34026,	30,	2 }, -- Kill Command
+		{ 2643, 	40,	2 }, -- Multi-Shot
+		{ 120679, 	25,	2 }, -- Dire Beast
 	},
 	[2] = { -- Marksmanship
-		{ 131894,	30,	SPELL_POWER_FOCUS }, -- A Murder of Crows
-		{ 19434,	50,	SPELL_POWER_FOCUS }, -- Aimed Shot
-		{ 120360,	60,	SPELL_POWER_FOCUS }, -- Barrage
-		{ 194599,	40,	SPELL_POWER_FOCUS }, -- Black Arrow
-		{ 186387,	10,	SPELL_POWER_FOCUS }, -- Bursting Shot
-		{ 185901,	30,	SPELL_POWER_FOCUS }, -- Marked Shot
+		{ 131894,	20,	2 }, -- A Murder of Crows
+		{ 19434,	30,	2 }, -- Aimed Shot
+		{ 185358,	15,	2 }, -- Arcane Shot
+		{ 257620,	15,	2 }, -- Multi-Shot
+		{ 120360,	30,	2 }, -- Barrage
+		{ 186387,	10,	2 }, -- Bursting Shot
+		{ 271788,	10,	2 }, -- Serpent Sting
+		{ 212431,	10,	2 }, -- Explosive Shot
+		{ 198670,	35,	2 }, -- Piercing Shot
 	},
 	[3] = { -- Survival
-		{ 206505,	30,	SPELL_POWER_FOCUS }, -- A Murder of Crows
-		{ 187708,	40,	SPELL_POWER_FOCUS }, -- Carve
-		{ 202800,	50,	SPELL_POWER_FOCUS }, -- Flanking Strike
-		{ 185855,	35,	SPELL_POWER_FOCUS }, -- Lacerate
-		{ 186270,	25,	SPELL_POWER_FOCUS }, -- Raptor Strike
-		{ 200163,	15,	SPELL_POWER_FOCUS }, -- Throwing Axes
-		{ 195645,	30,	SPELL_POWER_FOCUS }, -- Wing Clip
+		{ 131894,	30,	2 }, -- A Murder of Crows
+		{ 187708,	35,	2 }, -- Carve
+		{ 186270,	30,	2 }, -- Raptor Strike
+		{ 195645,	30,	2 }, -- Wing Clip
+		{ 259491,	20,	2 }, -- Serpent Sting
+		{ 212436,	30,	2 }, -- Butchery
+		{ 259387,	30,	2 }, -- Mongoose Bite
+		{ 259391,	30,	2 }, -- Chakrams
 	},
 }
 
@@ -107,18 +111,13 @@ ClassMods.stacks
 ClassMods.stacks = {
 	[1] = { -- Beast Mastery
 	--	{ 1,			2,			3,				4,	5, 			6				}, -- index
-		{ true,		217200, "pet",		5,	"NotMax",	"aura"		}, --  Dire Frenzy
+		{ true,		217200, "player",		2,	"AtMax",	"charges"		}, --  Barbed Shot
 	},
 	[2] = { -- Marksmanship
-		{ true,		194594, "player",	2, "Always",	"aura"		}, -- Lock and Load
-		{ false,	206817, "player",	2, "AtMax",	"charge"	}, -- Sentinel
-		{ false,	214579, "player",	2, "AtMax",	"charge"	}, -- Sidewinders
+		{ true,		194594, "player",	2, "Always",	"aura"	}, -- Lock and Load
 	},
 	[3] = { -- Survival
 		{ false,	212436, "player",	3, "AtMax",	"charge"	}, -- Butchery
-		{ true,		190928, "player",	3, "AtMax",	"charge"	}, -- Mongoose Bite
-		{ false,	200163, "player",	2, "AtMax",	"charge"	}, -- Throwing Axes
-		{ false,	201081, "player",	4, "NotMax",	"aura"		}, -- Way of the Mok'Nathal
 	},
 }
 
@@ -282,15 +281,6 @@ ClassMods.alertDefaults = {
 		enablesound = true,
 		sound = "Ding",
 		aura = 194594,
-		target = "player",
-		sparkles = true,
-	},
-	[select(1, GetSpellInfo(223138))] = { -- Marking Targets
-		enabled = true,
-		alerttype = "BUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 223138,
 		target = "player",
 		sparkles = true,
 	},

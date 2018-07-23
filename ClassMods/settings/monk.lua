@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Brewmaster
 	--	{ 1,      	2,          	3,      4,        5,            6, 								7		  },	-- index
-		{ true,		121253,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Keg Smash
-		{ true,		131894,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Expel Harm
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
+		{ true,		121253,	true, false, {1,1,1,1}, 3, false }, -- Keg Smash
+		{ false,		131894,	true, false, {1,1,1,1}, 3, false }, -- Expel Harm
+		{ true,		100780,	true, false, {1,1,1,1}, 3, false }, -- Tiger Palm
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
 	},
 	[2] = { -- Mistweaver
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
 	},
 	[3] = { -- Windwalker
-		{ true,		100780,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Tiger Palm
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
+		{ true,		100780,	true, false, {1,1,1,1}, 3, false }, -- Tiger Palm
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
 	},
 }
 
@@ -65,20 +65,21 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Brewmaster
 	--	{ 1,			2,		3,								   }, -- index
-		{ 218164,	20,	SPELL_POWER_ENERGY }, -- Detox
-		{ 116694,	30,	SPELL_POWER_ENERGY }, -- Effuse
-		{ 131894,	15,	SPELL_POWER_ENERGY }, -- Expel Harm
-		{ 121253,	40,	SPELL_POWER_ENERGY }, -- Keg Smash
-		{ 115078,	20,	SPELL_POWER_ENERGY }, -- Paralysis
-		{ 100780,	25,	SPELL_POWER_ENERGY }, -- Tiger Palm
+		{ 218164,	20,	3 }, -- Detox
+		{ 116670,	30,	3 }, -- Vivify
+		{ 131894,	15,	3 }, -- Expel Harm
+		{ 121253,	40,	3 }, -- Keg Smash
+		{ 115078,	20,	3 }, -- Paralysis
+		{ 100780,	25,	3 }, -- Tiger Palm
 	},
 	[2] = {}, -- Mistweaver
 	[3] = { -- Windwalker
-		{ 206505,	15,	SPELL_POWER_ENERGY }, -- Disable
-		{ 218164,	20,	SPELL_POWER_ENERGY }, -- Detox
-		{ 116694,	30,	SPELL_POWER_ENERGY }, -- Effuse
-		{ 115078,	20,	SPELL_POWER_ENERGY }, -- Paralysis
-		{ 100780,	50,	SPELL_POWER_ENERGY }, -- Tiger Palm
+		{ 206505,	15,	3 }, -- Disable
+		{ 218164,	20,	3 }, -- Detox
+		{ 116670,	30,	3 }, -- Vivify
+		{ 115078,	20,	3 }, -- Paralysis
+		{ 100780,	50,	3 }, -- Tiger Palm
+		{ 261947,   40, 3 }, -- Fist of the White Tiger
 	},
 }
 
@@ -101,20 +102,16 @@ ClassMods.stacks = {
 	--	{ 1,			2,			3,				4,	5, 			6				}, -- index
 		{ true,		115308, "player",	3,	"AtMax",	"charge"	}, -- Ironskin Brew (shared with Purifying Brew)
 		{ false,	122281, "player",	2, "AtMax",	"charge"	}, -- Healing Elixir
-		{ false,	122278, "player",	3, "Always",	"aura"		}, -- Dampen Harm
 		{ false,	109132, "player",	2,	"AtMax",	"charge"	}, -- Roll
 
 	},
 	[2] = { -- Mistweaver
-		{ true,		197945, "player",	2, "AtMax",	"charge"	}, -- Mistwalk
 		{ false,	122281, "player",	2, "AtMax",	"charge"	}, -- Healing Elixir
-		{ false,	122278, "player",	3, "Always",	"aura"		}, -- Dampen Harm
-		{ false,	202090, "player",	3, "AtMax",	"aura"		}, -- Teaching of the Monastery
+		{ true,	202090, "player",	3, "AtMax",	"aura"		}, -- Teaching of the Monastery
 	},
 	[3] = { -- Windwalker
 		{ true,		137639, "player",	2, "AtMax",	"aura"		}, -- Storm, Earth, and Fire
-		{ false,	122281, "player",	2, "AtMax",	"charge"	}, -- Healing Elixir
-		{ false,	122278, "player",	3, "Always",	"aura"		}, -- Dampen Harm
+		{ false,		196741, "player",	6, "AtMax",	"aura"		}, -- Hit Combo
 	},
 }
 
@@ -264,8 +261,8 @@ ClassMods.timerbarDefaults = {
 ClassMods.spellTrackerSpells = {
 -- [ 1]                  2,   3,  4    }	-- index
 	["132578"] = { nil, 0, 45.5 },	--	Invoke Niuzao, the Black Ox
-	["198664"] = { nil, 0, 45.5 },	--	Invoke Chi-Ji, the Red Crane
-	["123904"] = { nil, 0, 45.5 },	--	Invoke Xuen, the White Tiger
+	["198664"] = { nil, 0, 25.5 },	--	Invoke Chi-Ji, the Red Crane
+	["123904"] = { nil, 0, 20.5 },	--	Invoke Xuen, the White Tiger
 }
 
 --

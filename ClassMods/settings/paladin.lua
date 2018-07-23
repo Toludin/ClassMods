@@ -17,7 +17,7 @@ ClassMods.highwarn = false
 -- ResourceBar: Tick Marks
 --
 
-ClassMods.enableticks = false
+ClassMods.enableticks = true
 
 --[[
 ClassMods.ticks
@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Holy
 	--	{ 1,      	2,          	3,      4,        5,            6, 								7      },	-- index
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
 	},
 	[2] = { -- Protection
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
 	},
 	[3] = { -- Retribution
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ true,		85256,			true, false, {1,1,1,1}, 0, false }, -- Templar's Verdict
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 0, false },
 	},
 }
 
@@ -88,18 +88,20 @@ ClassMods.stacks = {
 		{ true,		223316,	"player",	3, "AtMax",	"aura"	}, -- Fervent Martyr
 		{ false,	214202,	"player",	2, "AtMax",	"charge"}, -- Rule of Law
 		{ false,	35395,		"player",	2, "AtMax",	"charge"}, -- Crusader Strike
-		{ false,	190784,	"player",	2, "AtMax",	"charge"}, -- Divine Stead
+		{ false,	190784,	"player",	2, "AtMax",	"charge"}, -- Divine Steed
 	},
 	[2] = { -- Protection
 		{ true,		53600,		"player",	3, "AtMax",	"charge" }, -- Shield of the Righteous
 		{ false,	53595,		"player",	2, "AtMax",	"charge" }, -- Hammer of the Righteous
 		{ false,	204019,	"player",	3, "AtMax",	"charge" }, -- Blessed Hammer
-		{ false,	190784,	"player",	2, "AtMax",	"charge"}, -- Divine Stead
+		{ false,	190784,	"player",	2, "AtMax",	"charge"}, -- Divine Steed
 	},
 	[3] = { -- Retribution
-		{ true,		35395,		"player",	2, "AtMax",	"charge"}, -- Crusader Strike
-		{ false,	217020,	"player",	2, "AtMax",	"charge"}, -- Zeal
-		{ false,	190784,	"player",	2, "AtMax",	"charge"}, -- Divine Stead
+		{ true,		35395,	"player",	2, "AtMax",	"charge"}, -- Crusader Strike
+		{ false,	269571,	"player",	3, "AtMax",	"aura"  }, -- Zeal
+		{ false,	190784,	"player",	2, "AtMax",	"charge"}, -- Divine Steed
+		{ false,	210191, "player",   2, "AtMax", "charge"}, -- Word of Glory
+		{ false,	114250, "player",   4, "AtMax", "charge"}, -- Selfless Healer
 	},
 }
 
@@ -407,7 +409,7 @@ ClassMods.totems
 
 ClassMods.enableTotems = true
 ClassMods.totems = {
-	{ true, 26573,	8.2	}, -- Consercration
-	{ true, 205228, 11	}, -- Consercration (Retribution)
+	{ true, 26573,	12	}, -- Consecration
+	{ true, 205228, 6	}, -- Consecration (Retribution)
 	{ true, 114158, 14	}, -- Light's Hammer
 }

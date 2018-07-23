@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Blood
 	--	{ 1,      	2,          	3,      4,        5,            6, 											7		 }, -- index
-		{ true,		49998,		true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false }, -- Death Strike
-		{ true,		206940,	true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false }, -- Mark of Blood
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
+		{ true,		49998,		true, false, {1,1,1,1}, 6, false }, -- Death Strike
+		{ true,		206940,		true, false, {1,1,1,1}, 6, false }, -- Mark of Blood
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
 	},
 	[2] = { -- Frost
-		{ true,		49143,		true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false }, -- Frost Strike
-		{ true,		49998,		true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false }, -- Death Strike
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
+		{ true,		49143,		true, false, {1,1,1,1}, 6, false }, -- Frost Strike
+		{ true,		49998,		true, false, {1,1,1,1}, 6, false }, -- Death Strike
+		{ false,	194913,		true, false, {1,1,1,1}, 6, false }, -- Glacial Advance
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
 	},
 	[3] = { -- Unholy
-		{ true,		47541,		true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false }, -- Death Coil
-		{ true,		49998,		true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false }, -- Death Strike
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_RUNIC_POWER, false },
+		{ true,		47541,		true, false, {1,1,1,1}, 6, false }, -- Death Coil
+		{ true,		49998,		true, false, {1,1,1,1}, 6, false }, -- Death Strike
+		{ true,		207317,		true, false, {1,1,1,1}, 6, false }, -- Epidemic
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
+		{ false,	nil,		true, false, {1,1,1,1}, 6, false },
 	},
 }
 
@@ -65,16 +65,22 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Blood
 	--	{ 1,			2,		3,											 }, -- index
-		{ 49998,	40,	SPELL_POWER_RUNIC_POWER }, -- Death Strike
-		{ 206940,	30,	SPELL_POWER_RUNIC_POWER }, -- Mark of Blood
+		{ 49998,	45,	6 }, -- Death Strike
+		{ 206940,	30,	6 }, -- Mark of Blood
+		{ 61999,	30,	6 }, -- Raise Ally
+		{ 194844,	100,6 }, -- Bonestorm
 	},
 	[2] = { -- Frost
-		{ 49143,	25,	SPELL_POWER_RUNIC_POWER }, -- Frost Strike
-		{ 49998,	40,	SPELL_POWER_RUNIC_POWER }, -- Death Strike
+		{ 49143,	25,	6 }, -- Frost Strike
+		{ 49998,	45,	6 }, -- Death Strike
+		{ 61999,	30,	6 }, -- Raise Ally
+		{ 194913,   30, 6 }, -- Glacial Advance
 	},
 	[3] = { -- Unholy
-		{ 47541,	35,	SPELL_POWER_RUNIC_POWER }, -- Death Coil
-		{ 49998,	40,	SPELL_POWER_RUNIC_POWER }, -- Death Strike
+		{ 47541,	40,	6 }, -- Death Coil
+		{ 49998,	45,	6 }, -- Death Strike
+		{ 61999,	30,	6 }, -- Raise Ally
+		{ 207317,   30, 6 }, -- Epidemic
 	},
 }
 
@@ -96,17 +102,17 @@ ClassMods.stacks = {
 	[1] = { -- Blood
 	--	{ 1,			2,				3,				4,	5, 			6			 }, -- index
 		{ true,		50842,		"player",	2,	"AtMax",	"charge" }, -- Blood Boil
-		{ false,	221699,	"player",	2,	"AtMax",	"charge" }, -- Blood Tap
+		{ false,	195181, "player", 10, "AtMax", "aura" }, -- Bone Shield
+		{ false,	210764,	"player",	2,	"AtMax",	"charge" }, -- Rune Strike
 		{ false,	194679,	"player",	2,	"AtMax",	"charge" }, -- Rune Tap
 		{ false,	51714,		"target",	5,	"AtMax",	"aura"	 }, -- Razorice
 	},
 	[2] = { -- Frost
 		{ true,		194879,	"player",	3, "AtMax",	"aura"	 }, -- Icy Talons
 		{ false,	51714,		"target",	5,	"AtMax",	"aura"	 }, -- Razorice
+		{ false,	281209,		"player",	20,	"AtMax",	"aura"	 }, -- Cold Heart
 	},
 	[3] = { -- Unholy
-		{ true,		207317,	"player",	3, "AtMax",	"charge" }, -- Epidemic
-		{ false,	194918,	"player",	4,	"Always",	"aura"	 }, -- Blighted Rune Weapon
 		{ false,	51714,		"target",	5,	"AtMax",	"aura"	 }, -- Razorice
 		{ false, 	194310, 	"target", 	8, "AtMax", 	"aura" 	 }, -- Festering Wound
 	},

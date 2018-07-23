@@ -33,25 +33,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Assasination
 	--	{ 1,      	2,          	3,      4,        5,            6, 								7		   }, -- index
-		{ true,		1329,		true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Mutilate
-		{ true,		32645,		true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Envenom
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
+		{ true,		1329,		true, false, {1,1,1,1}, 3, false }, -- Mutilate
+		{ true,		32645,		true, false, {1,1,1,1}, 3, false }, -- Envenom
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
 	},
 	[2] = { -- Outlaw
-		{ true,		193315,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Sinister Strike
-		{ true,		193316,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Roll the Bones
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
+		{ true,		193315,	true, false, {1,1,1,1}, 3, false }, -- Sinister Strike
+		{ true,		193316,	true, false, {1,1,1,1}, 3, false }, -- Roll the Bones
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
 	},
 	[3] = { -- Subtlety
-		{ true,		53,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Backstab
-		{ true,		196819,	true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false }, -- Eviscerate
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
-		{ false,	nil,			true, false, {1,1,1,1}, SPELL_POWER_ENERGY, false },
+		{ true,		53,			true, false, {1,1,1,1}, 3, false }, -- Backstab
+		{ true,		196819,	true, false, {1,1,1,1}, 3, false }, -- Eviscerate
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
+		{ false,	nil,			true, false, {1,1,1,1}, 3, false },
 	},
 }
 
@@ -65,45 +65,57 @@ ClassMods.classSpells
 ClassMods.classSpells = {
 	[1] = { -- Assasination
 	--	{ 1,			2,		3,								   }, -- index
-		{ 1329,		55,	SPELL_POWER_ENERGY }, -- Mutilate
-		{ 1943,		25,	SPELL_POWER_ENERGY }, -- Rupture
-		{ 16551,	30,	SPELL_POWER_ENERGY }, -- Hemorrhage
-		{ 32645,	35,	SPELL_POWER_ENERGY }, -- Envenom
-		{ 51723,	35,	SPELL_POWER_ENERGY }, -- Fan of Knives
-		{ 185565,	40,	SPELL_POWER_ENERGY }, -- Poisoned Knife
-		{ 703,		45,	SPELL_POWER_ENERGY }, -- Garrote
-		{ 1966,		20,	SPELL_POWER_ENERGY }, -- Feint
-		{ 152150,	25,	SPELL_POWER_ENERGY }, -- Death from Above
-		{ 6770,		35,	SPELL_POWER_ENERGY }, -- Sap
-		{ 408,		25,	SPELL_POWER_ENERGY }, -- Kidney Shot
+		{ 1329,		50,	3 }, -- Mutilate
+		{ 1943,		25,	3 }, -- Rupture
+		{ 200806,	25,	3 }, -- Exsanguinate
+		{ 32645,	35,	3 }, -- Envenom
+		{ 51723,	35,	3 }, -- Fan of Knives
+		{ 185565,	40,	3 }, -- Poisoned Knife
+		{ 703,		45,	3 }, -- Garrote
+		{ 1966,		35,	3 }, -- Feint
+		{ 6770,		35,	3 }, -- Sap
+		{ 408,		25,	3 }, -- Kidney Shot
+		{ 1725,		30,	3 }, -- Distract
+		{ 111240,	30,	3 }, -- Blindside
+		{ 245388,	20,	3 }, -- Toxic Blade
+		{ 121411,	35,	3 }, -- Crimson Tempset
+		{ 185311,	30,	3 }, -- Crimson Vial
+		{ 1833,		40,	3 }, -- Cheap Shot
 	},
 	[2] = { -- Outlaw
-		{ 1776,		25,	SPELL_POWER_ENERGY }, -- Gouge
-		{ 193316,	25,	SPELL_POWER_ENERGY }, -- Roll the Bones
-		{ 5171,		25,	SPELL_POWER_ENERGY }, -- Slice and Dice
-		{ 196937,	30,	SPELL_POWER_ENERGY }, -- Ghostly Strike
-		{ 199804,	35,	SPELL_POWER_ENERGY }, -- Between the Eyes
-		{ 2098,		35,	SPELL_POWER_ENERGY }, -- Run Through
-		{ 185763,	40,	SPELL_POWER_ENERGY }, -- Pistol Shot
-		{ 193315,	45,	SPELL_POWER_ENERGY }, -- Sinister Strike
-		{ 8676,		60,	SPELL_POWER_ENERGY }, -- Ambush
-		{ 1966,		20,	SPELL_POWER_ENERGY }, -- Feint
-		{ 152150,	25,	SPELL_POWER_ENERGY }, -- Death from Above
-		{ 6770,		35,	SPELL_POWER_ENERGY }, -- Sap
+		{ 1776,		25,	3 }, -- Gouge
+		{ 193316,	25,	3 }, -- Roll the Bones
+		{ 5171,		25,	3 }, -- Slice and Dice
+		{ 196937,	30,	3 }, -- Ghostly Strike
+		{ 199804,	25,	3 }, -- Between the Eyes
+		{ 2098,		35,	3 }, -- Dispatch
+		{ 185763,	40,	3 }, -- Pistol Shot
+		{ 193315,	45,	3 }, -- Sinister Strike
+		{ 8676,		50,	3 }, -- Ambush
+		{ 1966,		35,	3 }, -- Feint
+		{ 6770,		35,	3 }, -- Sap
+		{ 13877,	15,	3 }, -- Blade Flurry
+		{ 1833,		40,	3 }, -- Cheap Shot
+		{ 185311,	30,	3 }, -- Crimson Vial
+		{ 1725,		30,	3 }, -- Distract
 	},
 	[3] = { -- Subtlety
-		{ 195452,	25,	SPELL_POWER_ENERGY }, -- Nightblade
-		{ 206237,	30,	SPELL_POWER_ENERGY }, -- Enveloping Shadows
-		{ 53,		35,	SPELL_POWER_ENERGY }, -- Backstab
-		{ 196819,	35,	SPELL_POWER_ENERGY }, -- Eviscerate
-		{ 197835,	35,	SPELL_POWER_ENERGY }, -- Shuriken Storm
-		{ 200758,	35,	SPELL_POWER_ENERGY }, -- Gloomblade
-		{ 185438,	40,	SPELL_POWER_ENERGY }, -- Shadowstrike
-		{ 114014,	40,	SPELL_POWER_ENERGY }, -- Shuriken Toss
-		{ 1966,		20,	SPELL_POWER_ENERGY }, -- Feint
-		{ 152150,	25,	SPELL_POWER_ENERGY }, -- Death from Above
-		{ 6770,		35,	SPELL_POWER_ENERGY }, -- Sap
-		{ 408,		25,	SPELL_POWER_ENERGY }, -- Kidney Shot
+		{ 195452,	25,	3 }, -- Nightblade
+		{ 53,		35,	3 }, -- Backstab
+		{ 196819,	35,	3 }, -- Eviscerate
+		{ 197835,	35,	3 }, -- Shuriken Storm
+		{ 200758,	35,	3 }, -- Gloomblade
+		{ 185438,	40,	3 }, -- Shadowstrike
+		{ 114014,	40,	3 }, -- Shuriken Toss
+		{ 1966,		35,	3 }, -- Feint
+		{ 152150,	25,	3 }, -- Death from Above
+		{ 6770,		35,	3 }, -- Sap
+		{ 408,		25,	3 }, -- Kidney Shot
+		{ 185311,	30,	3 }, -- Crimson Vial
+		{ 1833,		40,	3 }, -- Cheap Shot
+		{ 1725,		30,	3 }, -- Distract
+		{ 280719,	30,	3 }, -- Secret Technique
+		{ 277925,	60,	3 }, -- Shuriken Tornado
 	},
 }
 
@@ -124,10 +136,11 @@ ClassMods.stacks
 ClassMods.stacks = {
 	[1] = { -- Assasination
 	--	{ 1,			2,			3,				4,	5, 			6				}, -- index
-		{ true,		200803, "target",	5,	"AtMax",	"aura"		}, --  Agonizing Poison
+		{false,	nil,	nil,	0,	nil,	nil}, --  
 	},
 	[2] = { -- Outlaw
 		{ true,		193316, "player",	6, "Always",	"aura"		}, -- Roll the Bones (number of buffs)
+		{ false,		13877, "player",	2, "Always",	"charges"		}, -- Blade Flurry
 	},
 	[3] = { -- Subtlety
 		{ true,		185313, "player",	3, "AtMax",	"charge"	}, -- Shadow Dance

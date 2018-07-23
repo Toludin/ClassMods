@@ -48,25 +48,25 @@ ClassMods.ticks
 ClassMods.ticks = {
 	[1] = { -- Discipline
 	--	{ 1,       2,   3,      4,        5,            6, 							  7       },	-- index
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 	[2] = { -- Holy
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 	[3] = { -- Shadow
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
-		{ false, nil, true, false, {1,1,1,1}, SPELL_POWER_MANA, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
+		{ false, nil, true, false, {1,1,1,1}, 0, false },
 	},
 }
 
@@ -100,7 +100,8 @@ ClassMods.stacks
 ClassMods.stacks = {
 	[1] = { -- Discipline
 	--	{ 1,			2,				3,				4,	5, 			6				}, -- index
-		{ true,		45242,		"player",	2, "AtMax",	"aura"		}, -- Focused Will
+		{ true,		194509,		"player",	2, "AtMax",	"charge"		}, -- Power Word: Radiance
+		{ false,	45242,		"player",	2, "AtMax",	"aura"		}, -- Focused Will
 		{ false,	121536,	"player",	3, "AtMax",	"charge"	}, -- Angelic Feather
 	},
 	[2] = { -- Holy
@@ -108,7 +109,7 @@ ClassMods.stacks = {
 		{ false,	45242,		"player",	2, "AtMax",	"aura"		}, -- Focused Will
 		{ false,	121536,	"player",	3, "AtMax",	"charge"	}, -- Angelic Feather
 		{ false,	14914,		"target",	2, "AtMax",	"aura"		}, -- Holy Fire
-		{ false,	41635,		"target",	5, "AtMax",	"aura"		}, -- Prayer of Mending
+		{ false,	41635,		"target",	10, "AtMax",	"aura"		}, -- Prayer of Mending
 	},
 	[3] = { -- Shadow
 		{ true,		32379,   "player",	2, "AtMax",	"charge"	}, -- Shadow Word: Death
@@ -266,15 +267,6 @@ ClassMods.spellTrackerSpells = {
 ClassMods.pethealthtexture = nil
 ClassMods.alertDefaults = {
 	["Player Health Alert"]	= { enabled = true, alerttype = "HEALTH", enablesound = true, sound = "Raid Warning", aura = "", target = "player", sparkles = true, healthpercent = 0.3 },
-	[select(1, GetSpellInfo(197030))] = { -- Divinity
-		enabled = true,
-		alerttype = "BUFF",
-		enablesound = true,
-		sound = "Ding",
-		aura = 197030,
-		target = "player",
-		sparkles = true,
-	},
 	[select(1, GetSpellInfo(197937))] = { -- Lingering Insanity
 		enabled = true,
 		alerttype = "BUFF",
@@ -389,7 +381,7 @@ ClassMods.announcementDefaults = {
 		arenachan = "AUTO",
 		pvpchan = "AUTO",
 	},
-	[select(1, GetSpellInfo(10060))] = {  --	Power Infusion
+	--[[[select(1, GetSpellInfo(10060))] = {  --	Power Infusion
 		enabled = true,
 		spellid = 10060,
 		announceend = false,
@@ -398,7 +390,7 @@ ClassMods.announcementDefaults = {
 		raidchan = "AUTO",
 		arenachan = "AUTO",
 		pvpchan = "AUTO",
-	},
+	},]]--
 }
 
 --
