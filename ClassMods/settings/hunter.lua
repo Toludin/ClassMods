@@ -358,8 +358,8 @@ ClassMods.enableCrowdControl = true
 ClassMods.crowdControlSpells = {
 --	{ 1,			2,			3,			4,		5   }, -- index
 	{ 187650,	true,	3355,	60,	30 },	-- Freezing Trap
-	{ 162488,	true,	162480, 30,	30 }, -- Steel Trap
-	{ 19386,	true,	19386,	30,	30 }, -- Wyvern Sting
+	{ 162488,	true,	162480, 20,	20 }, -- Steel Trap
+	--{ 19386,	true,	19386,	30,	30 }, -- Wyvern Sting
 }
 
 --
