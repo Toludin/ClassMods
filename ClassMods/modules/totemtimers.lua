@@ -189,7 +189,7 @@ function ClassMods.SetupTotemTimers()
 	ClassMods.F.Totems:RegisterEvent("PLAYER_TOTEM_UPDATE")
 	ClassMods.F.Totems:SetScript("OnEvent",
 		function(s, event, ...)
-			s._, s._subEvent, s._, s._sourceGUID, s._, s._sourceFlags, s._, s._destGUID, s._destName, s._destFlags, s._, s._spellId = ...
+			s._, s._subEvent, s._, s._sourceGUID, s._, s._sourceFlags, s._, s._destGUID, s._destName, s._destFlags, s._, s._spellId = CombatLogGetCurrentEventInfo()
 			if (s._subEvent == "SPELL_CAST_SUCCESS") and (s._sourceGUID == UnitGUID("player")) then
 				for i=1,#ClassMods.db.profile.totemtimers.totems do
 					-- 145205: Efflorescence

@@ -176,7 +176,7 @@ function ClassMods.SetupCrowdControl(lockName)
 	ClassMods.F.CrowdControl.ccFrame[1]:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	ClassMods.F.CrowdControl.ccFrame[1]:SetScript("OnEvent",
 		function(s, event, ...)
-			s._, s._subEvent, s._, s._sourceGUID, s._, s._sourceFlags, s._, s._destGUID, s._, s._destFlags, s._, s._spellId = ...
+			s._, s._subEvent, s._, s._sourceGUID, s._, s._sourceFlags, s._, s._destGUID, s._, s._destFlags, s._, s._spellId = CombatLogGetCurrentEventInfo()
 			if (s._subEvent == "SPELL_AURA_APPLIED") then
 				for index,value in ipairs(ClassMods.db.profile.crowdcontrol.spells) do
 					if ((ClassMods.db.profile.crowdcontrol.spells[index][2] == true) and (s._spellId == ClassMods.db.profile.crowdcontrol.spells[index][3])) and (((s._sourceGUID == UnitGUID("player")) or (bit.band(s._sourceFlags, COMBATLOG_OBJECT_AFFILIATION_MINE) == 1))) then

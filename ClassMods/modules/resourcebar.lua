@@ -412,6 +412,7 @@ function ClassMods.SetupResourceBar()
 						self.autoAttackValue:SetFormattedText("%.1f", self.autoAttackEndTime - GetTime() )
 					end
 				elseif (event == "COMBAT_LOG_EVENT_UNFILTERED") and (ClassMods.db.profile.resourcebar.autoattackbar or ClassMods.db.profile.resourcebar.autoattacktimer) then
+					eventtype, _, sourceGUID = select(2, CombatLogGetCurrentEventInfo())
 					if ((eventtype == "SWING_DAMAGE") or (eventtype == "SWING_MISSED")) and (sourceGUID == UnitGUID("player")) then
 						self.autoAttackStartTime = GetTime()
 						self.autoAttackEndTime = self.autoAttackStartTime + attackSpeed

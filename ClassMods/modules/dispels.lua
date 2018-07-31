@@ -122,9 +122,8 @@ function ClassMods.SetupDispels(lockName)
 		if (ClassMods.db.profile.dispel.removednotify == true) then
 			ClassMods.F.DispelAlert:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 			ClassMods.F.DispelAlert:SetScript("OnEvent",
-				function(self, event, ...)
+				function(self, event)
 					self._, self._subEvent, self._, self._sourceGUID, self._, self._, self._, self._destGUID, self._destName, self._, self._, self._spellID, self._spellName, self._, self._extraSpellID, self._extraSpellName = CombatLogGetCurrentEventInfo()
-					--self._, self._subEvent, self._, self._sourceGUID, self._, self._, self._, self._destGUID, self._destName, self._, self._, self._spellID, self._spellName, self._, self._extraSpellID, self._extraSpellName = ...
 					if (self._subEvent == "SPELL_DISPEL") and (self._sourceGUID == UnitGUID("player") ) and (self._destGUID ~= UnitGUID("pet") ) then
 						if (ClassMods.GetChatChan(ClassMods.db.profile.dispel[strlower(ClassMods.GetGroupType() ).."chan"]) ~= "NONE") then
 							SendChatMessage(GetSpellLink(self._spellID) .. " " .. L["removed"] .. " " .. GetSpellLink(self._extraSpellID) .. " " .. L["from"] .. " " .. self._destName .. ".", ClassMods.GetChatChan(ClassMods.db.profile.dispel[strlower(ClassMods.GetGroupType() ).."chan"]), nil, GetUnitName("player") )

@@ -29,8 +29,8 @@ function ClassMods.SetupAnnouncements()
 	ClassMods.F.Announcements:SetParent(UIParent)
 	ClassMods.F.Announcements:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	ClassMods.F.Announcements:SetScript("OnEvent",
-		function(self, event, ...)
-			self._, self._subEvent, self._, self._sourceGUID, self._, self._sourceFlags, self._, self._destGUID, self._destName, self._, self._, self._spellId, self._spellName, self._, self._extraSpellID, self._extraSpellName = ...
+		function(self, event)
+			self._, self._subEvent, self._, self._sourceGUID, self._, self._sourceFlags, self._, self._destGUID, self._destName, self._, self._, self._spellId, self._spellName, self._, self._extraSpellID, self._extraSpellName = CombatLogGetCurrentEventInfo()
 			if (self._subEvent == "SPELL_INTERRUPT") and (ClassMods.db.profile.announcements.interrupt.enabled) and ((self._sourceGUID == UnitGUID("player")) or (bit.band(self._sourceFlags, COMBATLOG_OBJECT_AFFILIATION_MINE) == 1)) then
 				if (ClassMods.GetChatChan(ClassMods.db.profile.announcements.interrupt[strlower(ClassMods.GetGroupType() ).."chan"]) ~= "NONE") then
 					SendChatMessage(L["Interrupted"] .. " " .. self._destName .. L["'s"] .. " " .. GetSpellLink(self._extraSpellID) .. " ", ClassMods.GetChatChan(ClassMods.db.profile.announcements.interrupt[strlower(ClassMods.GetGroupType() ).."chan"]), nil, GetUnitName("player") )
