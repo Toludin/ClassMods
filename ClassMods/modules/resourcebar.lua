@@ -618,6 +618,24 @@ function ClassMods.SetupResourceBar()
 						checkStacksFunction = function(self) return(select(4, UnitAura(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][3], buffIndex, "HELPFUL") ) or select(3, UnitAura(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][3], buffIndex, "PLAYER|HARMFUL") ) or 0) end
 					end
 				end
+			-- Fix for Ice Block
+			elseif ((ClassMods.db.profile.resourcebar.stacks[playerSpec][i][6] == "charge") and (select(2, UnitClass("player")) == "MAGE") and (playerSpec == 3)) then
+				if ClassMods.db.profile.resourcebar.stacks[playerSpec][i][2] == 45438 then
+					checkStacksFunction = function(self)
+						local charges = 0
+						local spellCooldown = select(2,GetSpellCooldown(45438))
+						if spellCooldown <1.5 then
+							charges = charges + 1
+						end
+						spellCooldown = select(1,GetSpellCooldown(235219))
+						if spellCooldown == 0 then
+							charges = charges + 1
+						end
+						return(charges)
+					end
+					--numBars = 2
+				end
+			-- End fix
 			elseif (ClassMods.db.profile.resourcebar.stacks[playerSpec][i][6] == "charge") and (GetSpellCharges(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][2]) > 1 ) then
 				checkStacksFunction = function(self) return(select(1, GetSpellCharges(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][2]) ) or 0) end
 				numBars = select(2, GetSpellCharges(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][2]))

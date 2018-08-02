@@ -84,7 +84,7 @@ ClassMods.stacks = {
 		{ true,		205025,	"player",	2, "AtMax",	"aura"		}, -- Presence of Mind
 		{ false,	116267,	"player",	5, "AtMax",	"aura"		}, -- Incanter's Flow
 		{ false,	116011,	"player",	2,	"AtMax",	"charge"	}, -- Rune of Power
-		{ false,	45438,		"player",	2, "AtMax",	"charge"	}, -- Ice Block (Cold Snap)
+		--{ false,	45438,		"player",	2, "AtMax",	"charge"	}, -- Ice Block (Cold Snap)
 		{ false,	108839,	"player",	3, "AtMax",	"charge"	}, -- Ice Floes
 		{ false,	122,			"player",	2, "AtMax",	"charge"	}, -- Frost Nova (Ice Ward)
 		{ false,	212653,	"player",	2, "AtMax",	"charge"	}, -- Shimmer
@@ -93,7 +93,7 @@ ClassMods.stacks = {
 		{ true,		108853,	"player",	2, "AtMax",	"charge"	}, -- Fire Blast
 		{ false,	116267,	"player",	5, "AtMax",	"aura"		}, -- Incanter's Flow
 		{ false,	116011,	"player",	2,	"AtMax",	"charge"	}, -- Rune of Power
-		{ false,	45438,		"player",	2, "AtMax",	"charge"	}, -- Ice Block (Cold Snap)
+		--{ false,	45438,		"player",	2, "AtMax",	"charge"	}, -- Ice Block (Cold Snap)
 		{ false,	108839,	"player",	3, "AtMax",	"charge"	}, -- Ice Floes
 		{ false,	122,			"player",	2, "AtMax",	"charge"	}, -- Frost Nova (Ice Ward)
 		{ false,	212653,	"player",	2, "AtMax",	"charge"	}, -- Shimmer
