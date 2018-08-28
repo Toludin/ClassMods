@@ -139,29 +139,29 @@ ClassMods.stacks
 
 ClassMods.stacks = {
 	[1] = { -- Balance
-	--	{ 1,			2,				3,				4,	5, 			6				}, -- index
-		{ true,		164547,	"player",	3, "AtMax",	"aura"		}, -- Lunar Empowerment
-		{ false,	164545,	"player",	3, "AtMax",	"charge"	}, -- Solar Empowerment
-		{ false,	202425,	"player",	2,	"Always",	"aura"		}, -- Warrior of Elune
-		{ false,	22842,		"player",	2,	"AtMax",	"charge"	}, -- Frenzied Regeneration
+	--	{ 1,		   2,		3,		4,	  5, 		   6		}, -- index
+		{ true,		164547,	"player",	3, "AtMax",		"aura"		}, -- Lunar Empowerment
+		{ false,	164545,	"player",	3, "AtMax",		"aura"		}, -- Solar Empowerment
+		{ false,	202425,	"player",	3, "Always",	"aura"		}, -- Warrior of Elune
+		{ false,	22842,	"player",	1, "AtMax",		"charge"	}, -- Frenzied Regeneration
 	},
 	[2] = { -- Feral
 		{ true,		145152,	"player",	2, "Always",	"aura"		}, -- Bloodtalons
-		{ false,	202208,	"player",	3, "AtMax",	"charge"	}, -- Brutal Slash
-		{ false,	61336,		"player",	2, "AtMax",	"charge"	}, -- Survival Instincts
+		{ false,	202208,	"player",	3, "AtMax",		"charge"	}, -- Brutal Slash
+		{ false,	61336,	"player",	2, "AtMax",		"charge"	}, -- Survival Instincts
 		{ false,	135700,	"player",	3, "Always",	"aura"		}, -- Clear Casting (Moment of Clarity talent)
-		{ false,	22842,		"player",	2, "AtMax",	"charge"	}, -- Frenzied Regeneration
+		{ false,	22842,	"player",	2, "AtMax",		"charge"	}, -- Frenzied Regeneration
 	},
 	[3] = { -- Guardian
-		{ true,		192090,	"target",	3, "AtMax",	"aura"		}, -- Thrash
+		{ true,		192090,	"target",	3, "AtMax",		"aura"		}, -- Thrash
 		{ false,	203974,	"player",	3, "Always",	"aura"		}, -- Earthwarden
-		{ false,	61336,		"player",	2, "AtMax",	"charge"	}, -- Survival Instincts
-		{ false,	22842,		"player",	2, "AtMax",	"charge"	}, -- Frenzied Regeneration
+		{ false,	61336,	"player",	2, "AtMax",		"charge"	}, -- Survival Instincts
+		{ false,	22842,	"player",	2, "AtMax",		"charge"	}, -- Frenzied Regeneration
 	},
 	[4] = { -- Restoration
-		{ true,		18562,		"player",	2, "Always",	"charge"	}, -- Swiftmend (Prosperity talent)
-		{ false,	16870,		"player",	3, "Always",	"aura"		}, -- Clear Casting (Moment of Clarity talent)
-		{ false,	22842,		"player",	2, "AtMax",	"charge"	}, -- Frenzied Regeneration
+		{ true,		18562,	"player",	2, "Always",	"charge"	}, -- Swiftmend (Prosperity talent)
+		{ false,	16870,	"player",	3, "Always",	"aura"		}, -- Clear Casting (Moment of Clarity talent)
+		{ false,	22842,	"player",	2, "AtMax",		"charge"	}, -- Frenzied Regeneration
 	},
 }
 
