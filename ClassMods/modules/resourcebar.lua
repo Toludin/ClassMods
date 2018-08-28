@@ -613,10 +613,7 @@ function ClassMods.SetupResourceBar()
 						return numBuffs
 					end
 				else
-					local buffIndex = ClassMods.getAuraIndex("player", GetSpellInfo(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][2]), "HELPFUL")
-					if buffIndex then
-						checkStacksFunction = function(self) return(select(4, UnitAura(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][3], buffIndex, "HELPFUL") ) or select(3, UnitAura(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][3], buffIndex, "PLAYER|HARMFUL") ) or 0) end
-					end
+					checkStacksFunction = function(self) return(select(3, AuraUtil.FindAuraByName(GetSpellInfo(ClassMods.db.profile.resourcebar.stacks[playerSpec][i][2]), ClassMods.db.profile.resourcebar.stacks[playerSpec][i][3])) or 0) end
 				end
 			-- Fix for Ice Block
 			elseif ((ClassMods.db.profile.resourcebar.stacks[playerSpec][i][6] == "charge") and (select(2, UnitClass("player")) == "MAGE") and (playerSpec == 3)) then
